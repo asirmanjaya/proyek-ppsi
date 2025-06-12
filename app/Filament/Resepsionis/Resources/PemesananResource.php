@@ -76,7 +76,7 @@ class PemesananResource extends Resource
 
             Components\DatePicker::make('tanggal_checkin')
                         ->label('Tanggal Check-In')
-                        ->default(today())
+
                         ->required()
                         ->displayFormat('d-m-Y')
                         ->minDate(today()) // Hanya tanggal, bukan waktu
