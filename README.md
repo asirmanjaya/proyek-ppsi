@@ -1,50 +1,29 @@
-# 🌐 Proyek PPSI – Sistem Booking Steze Kost & Guest House
+# 🏨 Steze Kost & Guest House Booking System
 
-Aplikasi pemesanan kamar berbasis Laravel untuk manajemen cabang, kamar, dan proses booking pelanggan. Dibangun dengan **Laravel Blade** untuk pelanggan, dan **Filament Admin Panel** untuk admin & resepsionis.
+Sistem manajemen reservasi untuk kost dan guest house, terdiri dari dua bagian utama:
 
----
-
-## 🔧 Teknologi yang Digunakan
-
-- Laravel 10+
-- Blade Template (Frontend)
-- Filament Admin (Backend)
-- Midtrans / Xendit (Pembayaran)
-- Laravel Mail (Notifikasi Email)
-- Google Maps Embed
+- **Frontend (Pelanggan)** – Laravel + Blade
+- **Backend (Admin & Resepsionis)** – Laravel + Filament
 
 ---
 
-## 👥 Pembagian Peran Pengembangan
+## 📦 Akses Repositori Kode
 
-### 🧑 Rekanmu – **Frontend (Pelanggan)**  
-📁 Folder utama:
-- `resources/views/frontend/`
-- `app/Http/Controllers/Frontend/`
-- `routes/web.php`
+🔗 GitHub Repository (Contoh):  
+[https://github.com/steze/guesthouse-booking](https://github.com/steze/guesthouse-booking)
 
-📌 Fokus tugas:
-- Halaman utama (daftar cabang)
-- Detail cabang & daftar kamar
-- Formulir booking
-- Halaman sukses booking
-- Proses booking + email + Midtrans/Xendit
-
----
-
-### 🛠 Kamu – **Admin & Resepsionis (Filament)**  
-📁 Folder utama:
-- `app/Filament/Resources/`
-- `routes/filament.php`
-- `app/Models/` *(bersama)*
-
-📌 Fokus tugas:
-- Panel admin (kelola cabang, kamar, user)
-- Panel resepsionis (verifikasi pemesanan, check-in, walk-in)
-- Otentikasi user Filament (admin/resepsionis)
-- Statistik & laporan
-
----
-
-## 📁 Struktur Direktori Disepakati
-
+📂 Folder Struktur:
+```bash
+app/
+├── Filament/                # Admin & Resepsionis (Filament Panel)
+├── Http/
+│   ├── Controllers/
+│   │   ├── Frontend/       # Kontrol pelanggan
+│   │   └── Admin/          # (Opsional) Kostumisasi Filament
+├── Models/                 # Share model
+resources/
+└── views/
+    ├── frontend/           # Blade views pelanggan
+routes/
+├── web.php                 # Routing pelanggan
+├── filament.php            # Routing Filament (admin/resepsionis)
